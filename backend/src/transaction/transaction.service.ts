@@ -99,4 +99,19 @@ export class TransactionService {
 
 		return transactions;
 	}
+
+	async findAllByType(id: number, type: string) {
+		const transactions = await this.transactionRepository.find({
+			where: {
+				user: { id },
+				type,
+			},
+		});
+
+		console.log(transactions);
+
+		const total = transactions.reduce((acc, obj) => acc + obj.amount, 0);
+		console.log(total);
+		return total;
+	}
 }

@@ -57,7 +57,7 @@ export class CategoryService {
 		});
 
 		if (!category) {
-			throw new NotFoundException('The category is not found');
+			throw new NotFoundException('The category1 is not found');
 		}
 
 		return category;
@@ -81,7 +81,7 @@ export class CategoryService {
 		});
 
 		if (!category) {
-			throw new NotFoundException('The category is not found');
+			throw new NotFoundException('The category2 is not found');
 		}
 
 		return await this.categoryRepository.delete(id);
