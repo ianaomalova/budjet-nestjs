@@ -25,6 +25,7 @@ export class Category {
 
   @OneToMany(() => Transaction, (transaction) => transaction.category)
   transactions: Transaction[];
+
   @CreateDateColumn()
   createdAt: Date;
 
