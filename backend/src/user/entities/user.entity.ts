@@ -18,7 +18,7 @@ export class User {
   email: string;
 
   @Column()
-  passwod: string;
+  password: string;
 
   @OneToMany(() => Category, (category) => category.user, {
     onDelete: 'CASCADE',
